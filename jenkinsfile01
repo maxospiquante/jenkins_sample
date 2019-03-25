@@ -4,7 +4,7 @@ node ('master') {
         }
  
 }
-node ('node-°2') {
+node ('node02') {
          stage('Test node 02') {
             sh 'ls / -la'
         }
