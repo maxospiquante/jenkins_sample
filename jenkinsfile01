@@ -1,6 +1,12 @@
-node {
+node ('master') {
          stage('Test') {
             sh 'echo bien'
+        }
+ 
+}
+node ('node-°2') {
+         stage('Test node 02') {
+            sh 'ls / -la'
         }
  
 }
