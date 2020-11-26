@@ -14,7 +14,7 @@ default_args = {
     'description': "Parent dag to test ExternalTaskSensor operator. This dag will trigger the child dag on success"
 }
 
-with DAG(dag_id="parent_dag", default_args=default_args,
+with DAG(dag_id="parent_dag2", default_args=default_args,
          schedule_interval="@hourly", catchup=False) as dag:
     dag.doc_md = __doc__
 
