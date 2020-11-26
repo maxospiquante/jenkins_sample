@@ -14,12 +14,12 @@ default_args = {
         Waiting for parent dag success in order to be triggered"
 }
 
-with DAG(dag_id="child_dag", default_args=default_args, 
+with DAG(dag_id="child_dag2", default_args=default_args, 
          schedule_interval="@hourly", catchup=False) as dag:
     dag.doc_md = __doc__
     is_data_in_s3 = ExternalTaskSensor(
         task_id='is_data_in_s3',
-        external_dag_id='parent_dag',
+        external_dag_id='parent_dag2',
         external_task_id='data_is_sensed_in_s3',
         execution_delta=timedelta(hours=1),
         #start_date=datetime(2020, 11, 3,13, 40),
